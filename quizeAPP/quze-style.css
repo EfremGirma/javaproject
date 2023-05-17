@@ -1,58 +1,87 @@
+/* (A) WRAPPER */
+#quizWrap {
+  max-width: 600px;
+  margin: 0 auto;
+  /* RECOMMENDED FIXED HEIGHT IF YOU HAVE CONTENT BELOW THE QUIZ */
+  /* SO THAT PAGE LAYOUT DOES NOT "JUMP" */
+  /* height: 250px; */
+}
+
+/* (B) QUESTION */
+#quizQn {
+  padding: 20px;
+  background: #4c93ba;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+/* (C) ANSWERS */
+#quizAns {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+#quizAns input[type=radio] {
+  display: none;
+}
+
+#quizAns label {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#quizAns label.correct {
+  background: #d8ffc4;
+  border: 1px solid #60a03f;
+}
+
+#quizAns label.wrong {
+  background: #ffe8e8;
+  border: 1px solid #c78181;
+}
+
+/* (X) DOES NOT MATTER - COSMETICS */
+/* PAGE & BODY */
 * {
+  font-family: arial, sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #b8c6db;
-  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
-  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
-.quiz-header {
-  padding: 1rem;
-}
-
-h2 {
-  padding: 1rem;
+  min-height: 100vh;
   text-align: center;
-  margin: 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 
-ul li {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+/* WIDGET */
+.widget-wrap {
+  width: 600px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
-ul li label {
-  cursor: pointer;
+/* FOOTER */
+#code-boxx {
+  font-weight: 600;
+  margin-top: 30px;
 }
-button {
-  background-color: #7b339b;
+
+#code-boxx a {
+  display: inline-block;
+  border: 0;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
   color: #fff;
-  border: none;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-family: inherit;
-  padding: 1.1rem;
-}
-
-button:hover {
-  background-color: #732d91;
-}
-
-button:focus {
-  outline: none;
-  background-color: #5e3370;
 }
