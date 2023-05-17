@@ -89,6 +89,13 @@ const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const submitButton = document.getElementById("submit");
-
-let currentQuiz = 0;
-let score = 0;
+const deselectAnswers = () => {
+  answerElements.forEach((answer) => (answer.checked = false));
+};
+const getSelected = () => {
+  let answer;
+  answerElements.forEach((answerElement) => {
+    if (answerElement.checked) answer = answerElement.id;
+  });
+  return answer;
+};
