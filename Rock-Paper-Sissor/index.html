@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-paper-Scissors</title>
+  </head>
+  <body>
+    <p>Roch Paper Scissors</p>
+    <button
+      onclick="
+    // console.log(Math.random());
+    const rand = Math.random();
+
+     let computerMove = '';
+     let result = '';
+
+    if( rand >= 0 && rand < 1/3){
+      computerMove ='rock';
+    } else if(rand >= 1 / 3 && rand < 2/3){
+     computerMove = 'paper';
+    } else if (rand >= 2 / 3 && rand < 1){
+     computerMove = 'scissor';
+    }
+   // console.log(computerMove);
+
+   if (computerMove === 'rock'){
+      result = 'Tie.'
+   } else if (computerMove === 'paper'){
+    result = 'You lose.';
+   } else if (computerMove === 'scissor'){
+    result = 'You Win!!!'
+   }
+   //console.log(result);
+    alert (`You picked Rock. Computer Picked ${computerMove}. ${result}`);
+    
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+    const Prand = Math.random();
+
+    let ComputerMove ='';
+
+    let Result = '';
+
+    if ( Prand >= 0 && Prand < 1 / 3){
+      ComputerMove = 'Rock';
+    } else if ( Prand >= 1 / 3 && Prand < 2 / 3){
+     ComputerMove = 'Paper';
+    } else if ( Prand >= 2 / 3 && Prand <1){
+      ComputerMove = 'Scissor';
+    }
+
+    // console.log (ComputerMove);
+
+    if ( ComputerMove === 'Rock'){
+      Result = 'You Win!!!.'
+    } else if ( ComputerMove === 'Paper'){
+      Result = 'Tie.'
+    } else if ( ComputerMove === 'Scissor'){
+      Result = 'You Lose.'
+    }
+
+  alert (`You picked Paper. Computer Picked ${ComputerMove}. ${Result}`);    
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+      Srand = Math.random();
+
+      let computermove = '';
+
+      let Sresult = '';
+     if ( Srand >= 0 && Srand < 1 / 3){
+      computermove = 'Rock';
+     } else if ( Srand >= 1 / 3 && Srand < 2/3){
+      computermove = 'Paper';
+     } else if ( Srand >= 2 / 3 && Srand < 1){ 
+      computermove = 'Scissor';
+     }
+
+      // console.log(computermove);
+
+     if ( computermove === 'Rock'){
+      Sresult = 'You Lose.';
+     } else if ( computermove === 'Paper'){
+      Sresult = 'You Win!!!.';
+     } else if ( computermove === 'Scissor'){
+      Sresult = 'Tie.';
+     }
+
+    //  console.log(Sresult);
+
+     alert (`You picked Scissor. Computer Picked ${computermove}. ${Sresult}`);
+    "
+    >
+      Scissors
+    </button>
+    <script></script>
+  </body>
+</html>
